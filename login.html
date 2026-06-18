@@ -1,3 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Admin Login</title>
+  <style>
+    :root {
+      --bg: #07182f;
+      --panel: rgba(9, 24, 47, 0.92);
+      --panel-border: rgba(108, 76, 255, 0.20);
+      --text: #e2efff;
+      --muted: #9bb0ce;
+      --accent: #6c4cff;
+      --accent-soft: rgba(108, 76, 255, 0.15);
+      --button: linear-gradient(135deg, #6c4cff, #2d225b);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+      min-height: 100%;
+      background: radial-gradient(circle at 10% 20%, rgba(108, 76, 255, 0.16), transparent 28%),
+                  radial-gradient(circle at 90% 15%, rgba(255, 122, 89, 0.12), transparent 26%),
+                  linear-gradient(135deg, #07182f, #10274b);
+      color: var(--text);
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    #login-form {
+      width: min(460px, 100%);
+      padding: 36px 34px;
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 28px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(12px);
+    }
+
+    #login-form h1 {
+      margin-bottom: 24px;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: #ffffff;
+      letter-spacing: -0.03em;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.25s ease, background 0.25s ease;
+    }
+
+    input:focus {
+      background: rgba(255, 255, 255, 0.10);
+      border-color: rgba(108, 76, 255, 0.45);
+    }
+
+    button {
+      width: 100%;
+      margin-top: 28px;
+      padding: 14px 18px;
+      border: none;
+      border-radius: 16px;
+      background: var(--button);
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 16px 30px rgba(108, 76, 255, 0.24);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 36px rgba(108, 76, 255, 0.28);
+    }
+
+    #login-message {
+      min-height: 24px;
+      margin-top: 18px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .lock-icon {
+      display: flex;
+      justify-content: center;
+      margin-top: 28px;
+      opacity: 1;
+    }
+
+    .lock-icon svg {
+      width: 72px;
+      height: 72px;
+      filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.25));
+    }
+
+    @media (max-width: 520px) {
+      #login-form {
+        padding: 28px 22px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
 <form id="login-form">
   <h1>Portfolio Administration</h1>
 
@@ -9,9 +146,20 @@
 
   <button type="submit">Sign in</button>
 
+  <div class="lock-icon" aria-hidden="true">
+    <svg width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" y="10" width="12" height="10" rx="2" stroke="#b4d7ff" stroke-opacity="0.92" stroke-width="2.2" fill="rgba(176, 214, 255, 0.08)" />
+      <path d="M8 10V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V10" stroke="#b4d7ff" stroke-opacity="0.92" stroke-width="2.2" stroke-linecap="round" />
+      <circle cx="12" cy="15" r="1.7" fill="#dcecff" fill-opacity="0.98" />
+      <path d="M10 18H14" stroke="#b8d6ff" stroke-width="1.8" stroke-linecap="round" opacity="0.95" />
+    </svg>
+  </div>
+
   <p id="login-message"></p>
 </form>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/supabase-config.js"></script>
 <script src="js/auth.js"></script>
+</body>
+</html>

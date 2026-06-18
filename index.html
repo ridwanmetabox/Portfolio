@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ridwan Soobratty | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="css/admin.css">
 </head>
 
 <body>
@@ -20,13 +19,15 @@
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+      <a href="login.html">Admin Login</a>
     </div>
   </nav>
 
   <main>
 
-    <section class = "hero" id="home">
+    <section class = "hero fade-in" id="home">
       <div class="hero-content">
         <h2>Hello there!</h2><h1>I'm Ridwan Soobratty</h1>
       </div>
@@ -35,13 +36,13 @@
       </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
         <p>I study Software Engineering at the University of Mauritius</p>
         <p>I am currently a Web Development Intern who is learning more about front-end development. I am building a responsive portfolio, and combining my interest in photography, fashion, and design to create visually appealing user interfaces.</p>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="fade-in">
         <h2>Skills</h2>
         <h4>Technical Skills</h4>
         <ul>
@@ -61,7 +62,7 @@
         </ul>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="fade-in">
       <h2>Projects</h2>
       <p>Here are a few of the projects I have built while learning web development and programming. Each one highlights my ability to design interfaces, solve problems, and deliver polished user experiences.</p>
       <div id="projects-container" class="project-grid">
@@ -71,7 +72,7 @@
       </div>
     </section>
 
-    <section id="research">
+    <section id="research" class="fade-in">
         <h2>Research & Learning</h2>
 
         <h4>AI Agents</h4>
@@ -85,7 +86,7 @@
     
       </section>
 
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>Contact Me</h2>
         <p>Email: soobrattyridwan@gmail.com</p>
         <p>Phone: +230 57842916</p>
@@ -101,9 +102,9 @@
 </p>
   </footer>
 
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/supabase-config.js"></script>
 <script src="js/projects.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

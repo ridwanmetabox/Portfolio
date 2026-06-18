@@ -3,7 +3,7 @@
   --primary-dark: #2d225b;
   --text: #1f2937;
   --muted-text: #6b7280;
-  --background: #ffffff;
+  --background: #1316d1;
   --accent-color: #04d5f5;
   --background-color: #0f172a;
   --section-color: #1a2744;
@@ -19,12 +19,19 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+  min-height: 100%;
+  background-color: #07182f;
+}
+
 body{
+    min-height: 100vh;
+    background-color: #07182f;
     background: 
     radial-gradient(circle at 10% 20%, rgba(108, 76, 255, 0.20), transparent 28%),
     radial-gradient(circle at 90% 15%, rgba(255, 122, 89, 0.17), transparent 26%),
     radial-gradient(circle at 70% 80%, rgba(83, 214, 190, 0.14), transparent 30%),
-    linear-gradient(135deg, #0a0f1f, #1a2540);
+    linear-gradient(135deg, #07182f, #172a57);
     color: var(--text-color);
     line-height:1.6;
     font-family: 'Poppins', sans-serif;
@@ -138,7 +145,6 @@ header {
   color: var(--primary);
 }
 
-/* Main Content */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -533,4 +539,18 @@ footer {
     text-align: center;
     padding: 2rem;
     margin-top: 3rem;
+}
+
+/* Fade-in animation */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease,
+              transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }

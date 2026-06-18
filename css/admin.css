@@ -5,15 +5,22 @@
 body {
   margin: 0;
   padding: 30px;
-  color: #1f2937;
+  min-height: 100vh;
+  color: #0f172a;
   font-family: Arial, sans-serif;
-  background: #f4f5fb;
+  background: radial-gradient(circle at 15% 20%, rgba(108, 76, 255, 0.18), transparent 24%),
+              radial-gradient(circle at 80% 10%, rgba(56, 137, 255, 0.14), transparent 22%),
+              linear-gradient(180deg, #dce7ff 0%, #e9f0ff 55%, #f7fbff 100%);
 }
 
 .admin-header {
   max-width: 1200px;
   margin: 0 auto 30px;
-  padding: 24px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(92, 131, 255, 0.25);
+  box-shadow: 0 18px 45px rgba(57, 105, 255, 0.08);
+  border-radius: 18px;
 
   display: flex;
   align-items: center;
@@ -45,8 +52,16 @@ body {
 .admin-form-section,
 .project-management-section {
   padding: 25px;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(92, 131, 255, 0.20);
+  box-shadow: 0 20px 40px rgba(38, 78, 166, 0.06);
   border-radius: 18px;
+}
+
+.admin-form-section {
+  background: rgba(255, 255, 255, 0.70);
+  backdrop-filter: blur(18px);
+  border-color: rgba(92, 131, 255, 0.18);
 }
 
 #project-form {
@@ -64,21 +79,32 @@ input,
 textarea,
 select {
   width: 100%;
-  padding: 12px;
+  padding: 14px 16px;
 
   font: inherit;
+  color: #0f172a;
+  background: rgba(242, 247, 255, 0.9);
 
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
+  border: 1px solid rgba(78, 116, 255, 0.25);
+  border-radius: 14px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: rgba(58, 95, 255, 0.7);
+  box-shadow: 0 0 0 4px rgba(108, 76, 255, 0.12);
+  background: rgba(255, 255, 255, 0.96);
 }
 
 button {
-  padding: 12px 18px;
+  padding: 14px 20px;
 
   color: white;
-  background: #5b4bdb;
+  background: linear-gradient(135deg, #5f66ff, #3b4fd6);
   border: none;
-  border-radius: 10px;
+  border-radius: 14px;
 
   font-weight: 700;
   cursor: pointer;
